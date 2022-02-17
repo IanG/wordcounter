@@ -126,7 +126,7 @@ public class WordCounter
 						.entrySet()
 						.stream()
 						.sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
-		                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (oldValue, newValue) -> oldValue, LinkedHashMap::new));
+						.collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (oldValue, newValue) -> oldValue, LinkedHashMap::new));
 			}
 			catch(IOException e)
 			{
@@ -138,7 +138,7 @@ public class WordCounter
 			// --------------------------------------------------------------------------------
 			// We don't have a file we can process
 			// --------------------------------------------------------------------------------
-			
+
 			return null;
 		}
 	}
@@ -153,7 +153,7 @@ public class WordCounter
 	{
 		if(file == null) throw new WordCounterException("No file specified");
 		if(!file.exists()) throw new WordCounterException("The file does not exist"); 
-		
+
 		return true;
 	}
 }

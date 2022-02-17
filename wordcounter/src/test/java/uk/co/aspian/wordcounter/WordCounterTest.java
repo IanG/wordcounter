@@ -51,15 +51,15 @@ public class WordCounterTest
 		// We expect a WordCounterException as we've not provided a File 
 		// --------------------------------------------------------------------------------
 		
-    		thrown.expect(WordCounterException.class);
-    		thrown.expectMessage("No file specified");
-    		
-    		// --------------------------------------------------------------------------------
+		thrown.expect(WordCounterException.class);
+		thrown.expectMessage("No file specified");
+
+		// --------------------------------------------------------------------------------
 		// Attempt to get the word counts to throw the WordCounterException
 		// --------------------------------------------------------------------------------
 
-    		WordCounter wc = new WordCounter(null);
-    		wc.getWordCounts();				
+		WordCounter wc = new WordCounter(null);
+		wc.getWordCounts();				
     }
     
     /**
@@ -78,15 +78,15 @@ public class WordCounterTest
 		// We expect a WordCounterException as we are providing a file that doesn't exist 
 		// --------------------------------------------------------------------------------
 				
-    		thrown.expect(WordCounterException.class);
-    		thrown.expectMessage("The file does not exist");
+		thrown.expect(WordCounterException.class);
+		thrown.expectMessage("The file does not exist");
 
-    		// --------------------------------------------------------------------------------
-    		// Attempt to get the word counts to throw the WordCounterException 
-    		// --------------------------------------------------------------------------------
-    		
-    		WordCounter wc = new WordCounter(new File("MissingFile.txt"));
-    		wc.getWordCounts();
+		// --------------------------------------------------------------------------------
+		// Attempt to get the word counts to throw the WordCounterException 
+		// --------------------------------------------------------------------------------
+	
+		WordCounter wc = new WordCounter(new File("MissingFile.txt"));
+		wc.getWordCounts();
 	}
 	
     /**
@@ -104,8 +104,8 @@ public class WordCounterTest
 		// --------------------------------------------------------------------------------
 		// Attempt to get the word counts 
 		// --------------------------------------------------------------------------------
-	
-    		WordCounter wc = new WordCounter(new File(getClass().getResource("EmptyFile.txt").getFile()));
+
+		WordCounter wc = new WordCounter(new File(getClass().getResource("EmptyFile.txt").getFile()));
 		Map<String, Integer> wordcounts = wc.getWordCounts();
 		
 		// --------------------------------------------------------------------------------
@@ -162,15 +162,15 @@ public class WordCounterTest
 		// We expect a WordCounterException as we've not provided a File 
 		// --------------------------------------------------------------------------------
 		
-    		thrown.expect(WordCounterException.class);
-    		thrown.expectMessage("No file specified");
-    		
-    		// --------------------------------------------------------------------------------
+		thrown.expect(WordCounterException.class);
+		thrown.expectMessage("No file specified");
+
+		// --------------------------------------------------------------------------------
 		// Attempt to get the word counts to throw the WordCounterException
 		// --------------------------------------------------------------------------------
 
-    		WordCounter wc = new WordCounter(null);
-    		wc.getWords();
+		WordCounter wc = new WordCounter(null);
+		wc.getWords();
     }
 	
 	/**
@@ -188,16 +188,16 @@ public class WordCounterTest
 		// --------------------------------------------------------------------------------
 		// We expect a WordCounterException as we are providing a file that doesn't exist 
 		// --------------------------------------------------------------------------------
-				
-    		thrown.expect(WordCounterException.class);
-    		thrown.expectMessage("The file does not exist");
 
-    		// --------------------------------------------------------------------------------
-    		// Attempt to get the word counts to throw the WordCounterException 
-    		// --------------------------------------------------------------------------------
-    		
-    		WordCounter wc = new WordCounter(new File("MissingFile.txt"));
-    		wc.getWords();
+		thrown.expect(WordCounterException.class);
+		thrown.expectMessage("The file does not exist");
+
+		// --------------------------------------------------------------------------------
+		// Attempt to get the word counts to throw the WordCounterException 
+		// --------------------------------------------------------------------------------
+
+		WordCounter wc = new WordCounter(new File("MissingFile.txt"));
+		wc.getWords();
 	}
 	
 
@@ -217,7 +217,7 @@ public class WordCounterTest
 		// Attempt to get the word counts 
 		// --------------------------------------------------------------------------------
 	
-    		WordCounter wc = new WordCounter(new File(getClass().getResource("EmptyFile.txt").getFile()));
+		WordCounter wc = new WordCounter(new File(getClass().getResource("EmptyFile.txt").getFile()));
 		List<String> words = wc.getWords();
 		
 		// --------------------------------------------------------------------------------
@@ -269,16 +269,16 @@ public class WordCounterTest
 		// --------------------------------------------------------------------------------
 		// We expect a WordCounterException as we've not provided a File 
 		// --------------------------------------------------------------------------------
-		
-    		thrown.expect(WordCounterException.class);
-    		thrown.expectMessage("No file specified");
-    		
-    		// --------------------------------------------------------------------------------
+
+		thrown.expect(WordCounterException.class);
+		thrown.expectMessage("No file specified");
+
+    	// --------------------------------------------------------------------------------
 		// Attempt to get the word counts to throw the WordCounterException
 		// --------------------------------------------------------------------------------
 
-    		WordCounter wc = new WordCounter(null);
-    		wc.getWordCount();
+		WordCounter wc = new WordCounter(null);
+		wc.getWordCount();
     }
 	
 	/**
@@ -296,16 +296,16 @@ public class WordCounterTest
 		// --------------------------------------------------------------------------------
 		// We expect a WordCounterException as we are providing a file that doesn't exist 
 		// --------------------------------------------------------------------------------
-				
-    		thrown.expect(WordCounterException.class);
-    		thrown.expectMessage("The file does not exist");
 
-    		// --------------------------------------------------------------------------------
-    		// Attempt to get the word counts to throw the WordCounterException 
-    		// --------------------------------------------------------------------------------
-    		
-    		WordCounter wc = new WordCounter(new File("MissingFile.txt"));
-    		wc.getWordCount();
+		thrown.expect(WordCounterException.class);
+		thrown.expectMessage("The file does not exist");
+
+		// --------------------------------------------------------------------------------
+		// Attempt to get the word counts to throw the WordCounterException 
+		// --------------------------------------------------------------------------------
+
+		WordCounter wc = new WordCounter(new File("MissingFile.txt"));
+		wc.getWordCount();
 	}
 	
     /**
@@ -323,8 +323,8 @@ public class WordCounterTest
 		// --------------------------------------------------------------------------------
 		// Attempt to get the word counts 
 		// --------------------------------------------------------------------------------
-	
-    		WordCounter wc = new WordCounter(new File(getClass().getResource("EmptyFile.txt").getFile()));
+
+		WordCounter wc = new WordCounter(new File(getClass().getResource("EmptyFile.txt").getFile()));
 		long wordCount = wc.getWordCount();
 		
 		// --------------------------------------------------------------------------------
